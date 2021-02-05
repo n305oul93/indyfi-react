@@ -6,7 +6,7 @@ class Header extends Component {
   render() {
     return (
       <Navbar dark color='primary'>
-        <NavbarBrand href='/'>IndyFi Logo Image</NavbarBrand>
+        <NavbarBrand href='/'>IndyFi Logo Img</NavbarBrand>
       </Navbar>
     );
   }
