@@ -25,7 +25,7 @@ class MainNavbar extends Component {
 
   render() {
     return (
-      <Navbar dark expand='md'>
+      <Navbar sticky='top' dark expand='md'>
         <NavbarBrand href='/'>
           <img
             src={indyFiLogo}
