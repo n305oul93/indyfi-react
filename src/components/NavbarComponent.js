@@ -31,8 +31,8 @@ class MainNavbar extends Component {
             src={indyFiLogo}
             alt='IndyFi'
             className='img-fluid'
-            width='100'
-            height='90'
+            width='90'
+            height='30'
           />
         </NavbarBrand>
         <NavbarToggler onClick={this.toggleNav} />
