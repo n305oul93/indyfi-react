@@ -9,6 +9,7 @@ import {
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import indyFiLogo from '../assets/images/indyfiLogo.jpg';
+import '../css/Navbar.css';
 
 class MainNavbar extends Component {
   constructor(props) {

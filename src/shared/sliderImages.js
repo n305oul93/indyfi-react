@@ -1,8 +1,12 @@
+import brolga from '../assets/images/slider/brolga.jpg';
+import line21Promo from '../assets/images/slider/Line-21-promo.jpg';
+import distanceMasterPromo from '../assets/images/slider/Distance-master-promo.jpg';
+
 export const SLIDERIMAGES = [
   {
     id: 0,
     name: 'Image 1',
-    image: '../assets/images/slider/gateway.jpg',
+    image: brolga,
     altText: 'Slide 1',
     captionText: 'Slide 1 Text',
     captionHeader: 'Slide 1 Header'
@@ -10,7 +14,7 @@ export const SLIDERIMAGES = [
   {
     id: 1,
     name: 'Image 2',
-    image: '../assets/images/slider/Line-21-promo.jpg',
+    image: line21Promo,
     altText: 'Slide 2',
     captionText: 'Slide 2 Text',
     captionHeader: 'Slide 2 Header'
@@ -18,7 +22,7 @@ export const SLIDERIMAGES = [
   {
     id: 2,
     name: 'Image 3',
-    image: '../assets/images/slider/ratnik.jpg',
+    image: distanceMasterPromo,
     altText: 'Slide 3',
     captionText: 'Slide 3 Text',
     captionHeader: 'Slide 3 Header'

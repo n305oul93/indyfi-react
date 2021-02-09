@@ -7,6 +7,7 @@ import {
   CarouselCaption
 } from 'reactstrap';
 import { SLIDERIMAGES } from '../shared/sliderImages';
+import '../css/Watch.css';
 
 const sliderImages = SLIDERIMAGES;
 
@@ -36,6 +37,7 @@ function Watch() {
   const slides = sliderImages.map(sliderImage => {
     return (
       <CarouselItem
+        className='watch-carousel'
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
         key={sliderImage.id}
