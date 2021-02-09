@@ -7,9 +7,11 @@ import {
   CarouselCaption
 } from 'reactstrap';
 import { SLIDERIMAGES } from '../shared/sliderImages';
+import { WATCHIMAGES } from '../shared/watchImages';
 import '../css/Watch.css';
 
 const sliderImages = SLIDERIMAGES;
+const watchImages = WATCHIMAGES;
 
 function Watch() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -52,24 +54,34 @@ function Watch() {
   });
 
   return (
-    <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-      <CarouselIndicators
-        items={sliderImages}
-        activeIndex={activeIndex}
-        onClickHandler={goToIndex}
-      />
-      {slides}
-      <CarouselControl
-        direction='prev'
-        directionText='Previous'
-        onClickHandler={previous}
-      />
-      <CarouselControl
-        direction='next'
-        directionText='Next'
-        onClickHandler={next}
-      />
-    </Carousel>
+    <>
+      <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+        <CarouselIndicators
+          items={sliderImages}
+          activeIndex={activeIndex}
+          onClickHandler={goToIndex}
+        />
+        {slides}
+        <CarouselControl
+          direction='prev'
+          directionText='Previous'
+          onClickHandler={previous}
+        />
+        <CarouselControl
+          direction='next'
+          directionText='Next'
+          onClickHandler={next}
+        />
+      </Carousel>
+      <div className='row'>
+        <h2>Title</h2>
+        <div className='row__posters'>
+          {watchImages.map(watchImage => (
+            <img className='row__poster' src={watchImage} alt='' />
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
 
