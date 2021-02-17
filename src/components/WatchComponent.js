@@ -9,6 +9,9 @@ import {
 import { SLIDERIMAGES } from '../shared/sliderImages';
 import { WATCHIMAGES } from '../shared/watchImages';
 import '../css/Watch.css';
+import FetchMovies from './FetchComponent';
+import { baseUrl } from '../shared/baseUrl';
+import request from '../shared/request';
 
 const sliderImages = SLIDERIMAGES;
 const watchImages = WATCHIMAGES;
@@ -73,14 +76,31 @@ function Watch() {
           onClickHandler={next}
         />
       </Carousel>
-      <div className='row'>
+      {/* <div className='row'>
         <h2>Title</h2>
         <div className='row__posters'>
           {watchImages.map(watchImage => (
             <img className='row__poster' src={watchImage} alt='' />
           ))}
         </div>
-      </div>
+      </div> */}
+
+      <FetchMovies
+        title='Top SciFi'
+        fetchUrl={baseUrl + request.fetchTopScienceFiction}
+      />
+      <FetchMovies
+        title='Action SciFi'
+        fetchUrl={baseUrl + request.fetchActionScienceFiction}
+      />
+      <FetchMovies
+        title='Animation SciFi'
+        fetchUrl={baseUrl + request.fetchAnimationScienceFiction}
+      />
+      <FetchMovies
+        title='Fantasy SciFi'
+        fetchUrl={baseUrl + request.fetchFantasy}
+      />
     </>
   );
 }
