@@ -1,43 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
   Carousel,
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
   CarouselCaption
-} from 'reactstrap';
-import { SLIDERIMAGES } from '../shared/sliderImages';
-import { WATCHIMAGES } from '../shared/watchImages';
-import '../css/Watch.css';
-import FetchMovies from './FetchComponent';
-import { baseUrl } from '../shared/baseUrl';
-import request from '../shared/request';
+} from 'reactstrap'
+import { SLIDERIMAGES } from '../shared/sliderImages'
+// import { WATCHIMAGES } from '../shared/watchImages';
+import '../css/Watch.css'
+import FetchMovies from './FetchComponent'
+import { baseUrl } from '../shared/baseUrl'
+import request from '../shared/request'
 
-const sliderImages = SLIDERIMAGES;
-const watchImages = WATCHIMAGES;
+const sliderImages = SLIDERIMAGES
+// Used if not using api call to fill in movies
+// const watchImages = WATCHIMAGES;
 
 function Watch() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [animating, setAnimating] = useState(false)
 
   const next = () => {
-    if (animating) return;
+    if (animating) return
     const nextIndex =
-      activeIndex === sliderImages.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
-  };
+      activeIndex === sliderImages.length - 1 ? 0 : activeIndex + 1
+    setActiveIndex(nextIndex)
+  }
 
   const previous = () => {
-    if (animating) return;
+    if (animating) return
     const nextIndex =
-      activeIndex === 0 ? sliderImages.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
-  };
+      activeIndex === 0 ? sliderImages.length - 1 : activeIndex - 1
+    setActiveIndex(nextIndex)
+  }
 
   const goToIndex = newIndex => {
-    if (animating) return;
-    setActiveIndex(newIndex);
-  };
+    if (animating) return
+    setActiveIndex(newIndex)
+  }
 
   const slides = sliderImages.map(sliderImage => {
     return (
@@ -53,8 +54,8 @@ function Watch() {
           captionHeader={sliderImage.captionHeader}
         />
       </CarouselItem>
-    );
-  });
+    )
+  })
 
   return (
     <>
@@ -102,7 +103,7 @@ function Watch() {
         fetchUrl={baseUrl + request.fetchFantasy}
       />
     </>
-  );
+  )
 }
 
-export default Watch;
+export default Watch

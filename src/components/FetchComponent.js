@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
-import { baseUrl } from '../shared/baseUrl';
-import request from '../shared/request';
-import '../css/Watch.css';
+import React, { Component } from 'react'
+import '../css/Fetch.css'
 
 class FetchMovies extends Component {
   constructor({ props }) {
-    super(props);
+    super(props)
     this.state = {
       sciFi: []
-    };
+    }
   }
 
   componentDidMount() {
@@ -19,12 +17,12 @@ class FetchMovies extends Component {
       .then(movies => {
         this.setState({
           sciFi: movies.results
-        });
-      });
+        })
+      })
   }
 
   render() {
-    const poster_url = 'https://image.tmdb.org/t/p/original';
+    const poster_url = 'https://image.tmdb.org/t/p/original'
     return (
       <div className='row'>
         <h2>{this.props.title}</h2>
@@ -42,8 +40,8 @@ class FetchMovies extends Component {
           ))}
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default FetchMovies;
+export default FetchMovies
