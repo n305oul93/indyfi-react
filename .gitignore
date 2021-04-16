@@ -24,6 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .eslintcache
-src/assets/videos
-src/shared/baseUrl.js
-src/shared/request.js
+#src/assets/videos
+#src/shared/baseUrl.js
+#src/shared/request.js
